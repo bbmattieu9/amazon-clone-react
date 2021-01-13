@@ -1,23 +1,23 @@
 import React from 'react'
 import './Product.css'
 
-function Product() {
+function Product({ title, rating, price, image, id }) {
     return (
         <div className='product'>
             <div className="product__info">
-                <p>The lean startup</p>
+                <p>{ title }</p>
                 <p className="product__price">
                     <small>$</small>
-                    <strong>19.99</strong>
+                    <strong>{price}</strong>
                 </p>
                 <div className="product__rating">
-                    <p className='star'>🌟</p>
-                    <p className='star'>🌟</p>
-                    <p className='star'>🌟</p>
+                    {Array(rating).fill().map((_, i) => (
+                        <p className='star'>🌟</p>
+                    ))}
                 </div>
             </div>
 
-            <img src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg" 
+            <img src={image}
                  alt="product-img"/>
 
          <button>Add to Basket</button>
