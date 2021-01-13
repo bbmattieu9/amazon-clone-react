@@ -7,22 +7,20 @@ import {
   Route
 }
   from 'react-router-dom';
+import Checkout from './Checkout';
 
 
 function App() {
   return (
     <Router>
       <div className="App">
-
+        <Header />
         <Switch>
-    
-        <Router path='/checkout'>
-            <Header />
-            <h1>I am the checkout page!</h1>
+          <Router path='/checkout'>
+            <Checkout />
           </Router>
 
           <Router path='/'>
-            <Header />
             <Home />
           </Router>
         </Switch>
