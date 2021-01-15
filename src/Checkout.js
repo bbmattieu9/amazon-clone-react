@@ -2,7 +2,11 @@ import React from 'react';
 import './Checkout.css';
 import Subtotal from './Subtotal';
 
+
 function Checkout() {
+
+   
+
     return <div className='checkout'>
         <div className="checkout__left">
             <img
