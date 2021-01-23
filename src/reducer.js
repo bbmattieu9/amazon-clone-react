@@ -1,4 +1,4 @@
-import { StarsTwoTone } from "@material-ui/icons";
+// import { StarsTwoTone } from "@material-ui/icons";
 
 export const initialState = {
     basket: [],

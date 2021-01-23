@@ -8,21 +8,28 @@ import {
 }
   from 'react-router-dom';
 import Checkout from './Checkout';
+import Login from './Login';
 
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+       
         <Switch>
-          <Router path='/checkout'>
+          <Route path='/login'>
+            <Login />
+          </Route>
+          
+          <Route path='/checkout'>
+            <Header />
             <Checkout />
-          </Router>
+          </Route>
 
-          <Router path='/'>
+          <Route path='/'>
+            <Header />
             <Home />
-          </Router>
+          </Route>
         </Switch>
       </div>
     </Router>
